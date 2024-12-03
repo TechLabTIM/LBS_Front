@@ -1,0 +1,13 @@
+<!-- keypad.component.html -->
+<div class="keypad-container">
+  <div class="number-display">
+    <input type="text" [value]="formattedPhoneNumber()" readonly>
+  </div>
+  <div class="keypad-buttons">
+    <button *ngFor="let number of [1,2,3,4,5,6,7,8,9,0,'⌫']" (click)="onButtonPress(number)">
+      {{ number }}
+    </button>
+  </div>
+  <button class="submit-button" (click)="openLocation()">Open Location</button>
+</div>
+
